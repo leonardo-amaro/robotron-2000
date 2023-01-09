@@ -72,7 +72,7 @@ main {
 }
 
 .montador {
-    height: 100%;;
+    height: min-content;
 }
 
 .montador-conteudo {
@@ -147,8 +147,6 @@ main {
     background: var(--main-preto);
     color: var(--main-branco)
 }
-
-
 
 /****************************** Estatísticas *****/
 .estatisticas {
