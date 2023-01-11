@@ -1,6 +1,7 @@
 const Controles = document.querySelectorAll('[data-controle]');
+const Estatisticas = document.querySelectorAll('[data-estatistica]');
 
-const pecas = {
+const Pecas = {
   "bracos": {
       "forca": 29,
       "poder": 35,
@@ -42,8 +43,13 @@ function manipularDom(operacao, div) {
   operacao === "+" ? contador.value = parseInt(contador.value) + 1 : contador.value = parseInt(contador.value) - 1
 };
 
+function atualizarStatus(peca) {
+  console.log(peca);
+};
+
 Controles.forEach(elemento => {
   elemento.addEventListener('click', evento => {
-    manipularDom(evento.target.dataset.controle, evento.target.parentNode)
+    manipularDom(evento.target.dataset.controle, evento.target.parentNode);
+    atualizarStatus(evento.target.dataset.peca)
   })
 });
