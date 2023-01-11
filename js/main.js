@@ -44,7 +44,9 @@ function manipularDom(operacao, div) {
 };
 
 function atualizarStatus(peca) {
-  console.log(peca);
+  Estatisticas.forEach(elemento => {
+    elemento.textContent = parseInt(elemento.textContent) + Pecas[peca][elemento.dataset.estatistica]
+  })
 };
 
 Controles.forEach(elemento => {
